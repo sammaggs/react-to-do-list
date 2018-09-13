@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-
+import CompleteButton from '../Containers/Button';
+import DeleteButton from '../Containers/DeleteButtonContainer';
+import AddTask from '../Containers/AddTask';
 
 class TaskList extends Component {
     
@@ -10,9 +12,13 @@ class TaskList extends Component {
 
         return (
             <React.Fragment>
+                <AddTask taskData={tasks}/>
                 <ul>
-                    {Object.values(taskInfo).map((item, i) => (
-                        <li key={i}> {item.title}{item.notes} </li>
+                    {Object.values(taskInfo).map((task, i) => (
+                        <li id={task.id} key={i}> Title: {task.title} Notes: {task.notes} 
+                            <CompleteButton id={task.id} completed={task.completed}/>
+                            <DeleteButton id={task.id}/>
+                        </li>
                     ))}
                 </ul>
             </React.Fragment>
