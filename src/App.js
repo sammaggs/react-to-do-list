@@ -5,6 +5,8 @@ import TaskList from './Containers/TaskListContainer';
 import Header from './Components/Header';
 import store from './Data/Store';
 import { Provider } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends Component {
   render() {

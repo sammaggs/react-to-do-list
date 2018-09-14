@@ -10,8 +10,10 @@ class TaskList extends Component {
     const { tasks } = this.props;
     const taskInfo = Object.values(tasks);
 
+
         return (
             <React.Fragment>
+                <div>
                 <AddTask taskData={tasks}/>
                 <ul>
                     {Object.values(taskInfo).map((task, i) => (
@@ -21,6 +23,7 @@ class TaskList extends Component {
                         </li>
                     ))}
                 </ul>
+                </div>
             </React.Fragment>
         )
     }

@@ -7,6 +7,7 @@ const CompleteButton = ({ onClick, id, completed }) => {
   }
 
   return <button 
+            className="btn-primary"
             style={buttonStyle}
             onClick={ () => onClick(id)}
             > Complete
