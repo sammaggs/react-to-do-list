@@ -19,3 +19,11 @@ export const addTask = ( {title, id} ) => {
         title : title,
     };
 };
+
+export const setTasks = tasks => {
+    return {
+        type: "setTasks",
+        tasks: tasks,
+        
+    };
+};

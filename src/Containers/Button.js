@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Button from '../Components/Button';
-import { isCompleted } from '../Data/Actions';
+import { isCompleted } from '../Data/StateActions';
 
 
 const mapDispatchToProps = dispatch => {

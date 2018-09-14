@@ -3,6 +3,7 @@ const reducer = ( state, action ) => {
         case "onClickComplete" : return onClickComplete(state, action);
         case "onClickDelete" : return onClickDelete(state, action);
         case "onClickAddTask" : return onClickAddTask(state, action);
+        case "setTasks": return setTasks(state, action);
         default: return state;
 
     };
@@ -47,6 +48,23 @@ const createTask = ({ title }) => {
         id: lastID,
         title: title,  
     };
+};
+
+const convertData = (tasks) => {
+    let data = {};
+    tasks.map((task, i) => {
+        data[task.id] = task;
+    })
+    return data;
+ }
+
+const setTasks = (state, action) => {
+    const convertedData = convertData(action.tasks.data);
+
+    return {
+        ...state,
+        tasks: convertedData
+    }
 };
 
 export default reducer;

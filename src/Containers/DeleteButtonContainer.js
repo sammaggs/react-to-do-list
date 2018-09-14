@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import DeleteButton from '../Components/DeleteButton';
-import { isDeleted } from '../Data/Actions';
+import { isDeleted } from '../Data/StateActions';
 
 
 const mapDispatchToProps = dispatch => {
